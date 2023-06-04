@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Intro...</title>
+	<link rel="stylesheet" href="./css/qna.css">
+		<style type="text/css">
+		body, ul, li, a, nav, video, section, footer, main{margin: 0; padding: 0;}
+		.wrapper{
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+		}
+		.black-line{
+					background-color: white;
+					border: 3px solid black;
+					padding: 10px;
+					margin: auto;
+					width: 1500px;
+					height: 200px;
+					position: relative;
+					font-size: 2rem;}
+		.center{text-align: center;
+				padding: 30px;
+				margin: auto;}
+		.typing-demo {
+ 			 width: 800px;
+ 			 animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  			white-space: nowrap;
+  			overflow: hidden;
+  			border-right: 3px solid;				
+  			font-size: 2.7rem;
+				}
+		.white{border: 0;
+  background-color: white;}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+			.black{background-color: black;
+						opacity: 0.5;
+						width: 100vw;
+						height: 100vh;}
+			li{list-style-type: none;
+				margin: 20px;}
+			a{display: block;
+				padding: 20px;
+				text-decoration: none;
+				color: black;
+				font-size: 3rem;
+				border: 1px solid black;
+				border-radius: 50px;
+				margin: auto;
+				width: 1000px;
+				height: 60px;
+				position: relative;
+				text-align: center;}
+			a:hover{
+				background-color: black;
+				color: white;
+				transition: all 0.2s;
+			}
+			.center2{margin-top: 300px;}
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<section id="main" >
+		<div class="center">
+			<img src="sea.jpg">
+		</div>
+		<div class="black-line">
+		<button class="white" type="button" onclick="js:begin()">					
+		<div class="typing-demo">
+			해변을 거닐다 지도가 들어있는 병을 발견했다.
+		</div>
+		</button>
+		</div>
+
+	</section>
+	<section id="qna">
+		<div class="center2">
+<li><a href="./pj3/index.html">혹시 숨겨진 보물에 대한 지도..? 무조건 열어본다!</a></li>
+<li><a href="">굴러 들어온 복을 발로 차야지. 그냥 간다.</a></li>
+</div>
+	</section>
+
+	<script src="./js/start.js" charset="utf-8"></script>
+	</div>
+
+
+</body>
+</html>

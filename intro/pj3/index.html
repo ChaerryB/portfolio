@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>배채원정대</title>
+	<link rel="stylesheet" type="text/css" href="./motion/index.html">
+	<style type="text/css">
+		@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+		body, ul, li, a, nav, hr, img, video, section, footer{margin: 0; padding: 0;}
+		.wrapper{
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+		}
+		nav{
+			position: sticky;
+			top: 0;
+			background: white;
+			}
+		.menu{margin: auto;
+			  width: 97%;
+			  padding: 0px;
+			  background: white;
+			  }
+		.flex{display: flex;
+			  justify-content: space-between;}
+		li{list-style-type: none;}
+		a{display: block;
+		  padding: 0px 0px;
+		  text-decoration: none;
+		  color: black;
+		  font-size: 5rem;
+			z-index: 1000;}
+		a:hover{
+			background: white;
+			color: blue;
+			transition: all 0.2s;
+			}
+		.map{
+			        width: 100vw;
+			        height: 110vh;
+
+        background-image: url('img/bg.png');
+        background-repeat : no-repeat;
+        background-size : cover;
+        position: relative;
+    	z-index: 100;}
+        .b-edit{position: absolute;
+        	  width: 350px;
+      		  height: 725px;
+      		  top: 193px;
+      		  right: 23px;}
+      	.edit{display: none;
+      		  position: absolute;
+        	  width: 350px;
+      		  height: 725px;
+      		  top: 193px;
+      		  right: 23px;
+      		  opacity: 0;
+      		   }
+      	.b-edit:hover ~ .edit{display: block; opacity: 1;
+      						transition: all 0.5s;}
+
+        .b-cam{position: absolute;
+        	width: 350px;
+        	height: 339px;
+        	top: 80px;
+        	right: 200px;}
+         .cam{display: none;
+         	position: absolute;
+        	width: 350px;
+        	height: 339px;
+        	top: 80px;
+        	right: 200px;
+        	opacity: 0;}
+        .b-cam:hover ~ .cam{display: block; opacity: 1;
+        	transition: all 0.5s;
+        }
+        
+        .b-goods{position: absolute;
+        	   width: 400px;
+        	   height: 400px;
+        		top: 500px;
+        		right: 400px;}
+        .goods{display: none;
+        	   position: absolute;
+        	   width: 400px;
+        	   height: 400px;
+        		top: 500px;
+        		right: 400px;
+        		opacity: 0;}
+        .b-goods:hover ~ .goods{display: block; opacity: 1;
+        transition: all 0.5s;}
+
+
+        .b-photo{position: absolute;
+        	   width: 220px;
+        	   height: 249px;
+       		 	top: 185px;
+       		 	left: 620px;}
+       	.photo{display:none;
+       		   position: absolute;
+        	   width: 220px;
+        	   height: 249px;
+       		 	top: 185px;
+       		 	left: 620px;
+       		 	opacity: 0;}
+       	.b-photo:hover ~ .photo{display: block; opacity: 1;
+       	transition: all 0.5s;}
+
+        .b-graphic{position: absolute;
+        	     width: 600px;
+        	   	 height: 354px;
+        	   	top: 450px;
+      		  	left: 100px;}
+        .graphic{display: none;
+        	     position: absolute;
+        	     width: 600px;
+        	   	 height: 354px;
+        	   	top: 450px;
+      		  	left: 100px;
+      		  	opacity: 0;}
+      	.b-graphic:hover ~ .graphic{display: block; opacity: 1;
+      	transition: all 0.5s;}
+
+        .b-motion{position: absolute;
+        	    width: 400px;
+        	    height: 397px;
+     		   	top: 150px;
+        		left: 20px;}
+        .motion{display: none;
+        		position: absolute;
+        	    width: 400px;
+        	    height: 397px;
+     		   	top: 150px;
+        		left: 20px;
+        		opacity: 0;}
+        .b-motion:hover ~ .motion{display: block; opacity: 1;
+        transition: all 0.5s;}
+
+        .compass{position: fixed;
+        		width: 120px;
+        		height: 120px;
+        		top: 700px;
+        		right: 25px;
+        		z-index: 500;}
+
+
+        .box1{
+        	 border: 1px solid black;
+        	 background-color: white;
+        	 color: black;
+        	 position: absolute;
+        	 top: 28px;
+        	 left: 24px;
+        	 font-size: 3.9rem;
+        	 padding: 5px;
+        	 width: 90vw;
+        	}
+        .small{font-size: 2.2rem;}
+        .showreel{width: 100vw;
+			      height: 100vh;
+        background-image: url('img/bg.png');
+        background-repeat : no-repeat;
+        background-size : cover;}
+
+        .intro{
+        		padding-top: 100px;
+        		text-align: center;
+        		font-weight: 200;
+        		font-size: 5rem;
+        		}
+
+        .im{margin-top: -50px;
+        	width:260px;
+        	height: 130px;}
+        .multi{width: 1200px;
+        		height: 190px;}
+        .history{width: 100vw;
+        		height: 120vh;}
+        .movie{display: block;
+        	width: 100vw;
+        	   margin: auto;}
+
+       	footer{margin-top: 50px;
+       		   font-size: 4rem;
+       		   }
+		.find{font-size: 8rem;}
+
+				.black-line{
+					background-color: white;
+					border: 3px solid black;
+					padding: 10px;
+					margin: auto;
+					width: 1500px;
+					height: 200px;
+					position: relative;
+					font-size: 2rem;
+					margin-top: 100px;
+					margin-bottom: 100px;}
+
+		.typing-demo {
+ 			 width: 420px;
+ 			 animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  			white-space: nowrap;
+  			overflow: hidden;
+  			border-right: 3px solid;				
+  			font-size: 2.7rem;
+				}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.hole{margin-top: 50px;
+		margin-bottom: 50px;}
+	</style>
+}
+</head>
+<body>
+	<nav>
+		<ul class="menu flex">
+			<li><a href="#">HOME ① </a></li>
+			<li><a href="#map">MAP ② </a></li>
+			<li><a href="#treasure">TREASURE ③ </a></li>
+			<li><a href="#footer">JOIN-US ④ </a></li>
+		</ul>
+	</nav>
+	<hr style="border: solid 1px;">
+	<img class="compass" src="img/compass.png" href="#" >
+		<section class="wrapper map">
+		<div class="box1">Location of the 6 treasures is hidden, <span class="small"> and may be one special...?</span></div>			
+			<a href="./edit/index.html"><img class="b-edit" src="img/b-edit.png">
+			<img class="edit" src="img/edit.png"></a>
+			<a href="./cam/index.html"><img class="b-cam" src="img/b-cam.png">
+			<img class="cam" src="img/cam.png"></a>
+			<a href="./goods/index.html"><img class="b-goods" src="img/b-goods.png">
+			<img class="goods" src="img/goods.png"></a>
+			<a href="./photo/index.html"><img class="b-photo" src="img/b-photo.png">
+			<img class="photo" src="img/photo.png"></a>
+			<a href="./graphic/index.html"><img class="b-graphic" src="img/b-graphic.png">
+			<img class="graphic" src="img/graphic.png"></a>
+			<a href="./motion/index.html"><img class="b-motion" src="img/b-motion.png">
+			<img class="motion" src="img/motion.png"></a>
+		</section>
+	<hr style="border: solid 1px;">
+		<section>
+		<video class="movie" controls>
+		<source src="showreel.mp4" type="video/mp4">
+		</video>
+		</section>
+	<hr style="border: solid 1px;">
+		<section>
+		<div class="intro">
+			GRAPHIC DESIGNER? ART DIRECTOR?<br>PHOTOGRAPHER? EDITORIAL DESIGNER?<br>
+		<img class="im" src="img/im.png">
+		<br>
+		<br>
+		<img class="multi" src="img/multi.png">
+		<br>
+		<br>
+		</div>
+		</section>
+	<hr style="border: solid 1px;">
+		<section>
+			<a name="map"></a>
+			<div class="small">
+			  EP.1 THE HISTORY OF TREASURE
+			</div>
+	<hr style="border: solid 1px;">
+			<div>
+				<img class="history" src="img/history.png">
+			</div>
+		</section>
+	<hr style="border: solid 1px;">
+		<section>
+			<div class="small">
+			  EP.2 FIND TREASURE
+			</div>
+			<a name="treasure"></a>
+	<hr style="border: solid 1px;">
+			<div class="hole">
+			<nav class="menu flex">
+			<li><a href="./cam/index.html">CAM</a></li>
+			<li><a href=".edit/index.html">EDIT</a></li>
+			<li><a href="./goods/index.html">GOODS</a></li>
+			<li><a href=".graphic/index.html">GRAPHIC</a></li>
+			<li><a href=".motion/index.html">MOTION</a></li>
+			<li><a href=".photo/index.html">PHOTO</a></li>
+			</nav>
+		</div>
+		</section>
+		<section>
+	<hr style="border: solid 1px;">
+		<section>
+			<div class="small">
+			  EP.3 IF YOU FIND..
+			</div>
+	<hr style="border: solid 1px;">
+		</section>
+<div class="black-line">				
+		<div class="typing-demo">
+			드디어 보물을 발견했다!
+		</div>
+		</button>
+		</div>
+	<hr style="border: solid 1px;">
+</body>
+<footer>
+	<a name="footer"></a>
+	CONTACT<br>BAEJJANG-I@NAVER.COM<br>@BAEJJANG.I
+
+</footer>
+</html>
